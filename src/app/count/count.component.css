@@ -1,0 +1,11 @@
+button, label {
+    margin: 10px;
+}
+
+button {
+    width: 50px;
+}
+
+.negative {
+    color: red;
+}

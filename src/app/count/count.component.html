@@ -1,0 +1,11 @@
+<div class="d-flex justify-content-between">
+    <button class="btn btn-primary" (click)="changeNumber(true)">+</button>
+    <label class="d-flex justify-content-center align-items-center" [ngClass]="{ negative: number < 0 }">{{number}}</label>
+    <button class="btn btn-primary" (click)="changeNumber(false)">-</button>
+</div>
+<div class="d-flex justify-content-center" [ngStyle]="{ color: number > 0 ? 'green' : 'red' }">
+    <label *ngIf="number > 0; else negative">Número é maior que 0</label>
+    <ng-template #negative>
+        <label>Número é menor ou igual a 0</label>
+    </ng-template>
+</div>
