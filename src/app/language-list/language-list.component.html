@@ -1,0 +1,13 @@
+<div class="d-flex align-items-center flex-column">
+    <h1>Lista de Linguagens</h1>
+    <div *ngIf="loading; else languageList" class="spinner-border" role="status">
+        <span class="sr-only">Loading...</span>
+    </div>
+    <ng-template #languageList>
+        <ul>
+            <li *ngFor="let language of languages">
+                <app-language-item [language]="language"></app-language-item>
+            </li>
+        </ul>
+    </ng-template>
+</div>
