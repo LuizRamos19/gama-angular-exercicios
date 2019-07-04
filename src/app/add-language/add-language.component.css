@@ -1,0 +1,23 @@
+.btn {
+    margin-top: 10px;
+    width: 100%;
+}
+
+.btn-primary {
+    background-color: green;
+    border-color: green;
+}
+
+.errors {
+    position: absolute;
+    font-size: 13px;
+    color: red;
+}
+
+input.ng-invalid.ng-touched {
+    border: 1px solid red;
+}
+
+input.ng-valid.ng-touched {
+    border: 1px solid rgb(122, 209, 122);
+}

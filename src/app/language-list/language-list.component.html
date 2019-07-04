@@ -4,10 +4,12 @@
         <span class="sr-only">Loading...</span>
     </div>
     <ng-template #languageList>
-        <ul>
-            <li *ngFor="let language of languages">
-                <app-language-item [language]="language"></app-language-item>
-            </li>
-        </ul>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-6 col-md-4" *ngFor="let language of languages">
+                    <app-language-item [language]="language"></app-language-item>
+                </div>
+            </div>
+        </div>
     </ng-template>
 </div>

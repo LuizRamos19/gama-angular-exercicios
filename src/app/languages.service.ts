@@ -7,11 +7,15 @@ import { Languages } from 'src/typings/languages';
     providedIn: 'root'
 })
 export class LanguagesService {
-    readonly URL = 'https://alefesouza.dev/gama/languages.php';
+    readonly URL = 'http://localhost:3000/languages';
 
     constructor(private httpClient: HttpClient) { }
 
     getLanguages(): Observable<Languages[]> {
         return this.httpClient.get<Languages[]>(this.URL);
+    }
+
+    addLanguage(language: Languages): Observable<Languages> {
+        return this.httpClient.post<Languages>(this.URL, language);
     }
 }

@@ -1,6 +1,5 @@
-<div>
+<div class="language-item">
     <b>Name: </b>{{ language.name }} <br>
     <b>Creator: </b>{{ language.creator }} <br>
-    <b>Year: </b>{{ language.year }}
-    <hr>
+    <b>Year: </b>{{ language.year | yearBefore }}
 </div>
